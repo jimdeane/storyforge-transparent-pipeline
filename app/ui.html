@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transparent Pipeline UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        h1 { color: #333; }
+        .timeline { position: relative; max-width: 600px; margin: 0 auto; }
+        .timeline:before { content:''; position: absolute; top: 0; bottom: 0; width: 4px; background-color: #ddd; left: 50px; }
+        .timeline-event { position: relative; margin: 20px 0 20px 80px; }
+        .timeline-event::before { content:''; position: absolute; top: 10px; left: -34px; width: 20px; height: 20px; border-radius: 50%; background-color: #4285F4; }
+        .event-title { font-weight:bold; font-size: 1.1em; color: #333; }
+        .event-desc { margin-top: 4px; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Transparent Program Generation Pipeline</h1>
+    <div class="timeline">
+        <div class="timeline-event">
+            <div class="event-title">Run created</div>
+            <div class="event-desc">Run initialization step executed.</div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-title">Context built</div>
+            <div class="event-desc">Context indexing and retrieval performed.</div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-title">Plan generated</div>
+            <div class="event-desc">High level plan produced for modifications.</div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-title">Patch applied</div>
+            <div class="event-desc">Code modifications applied to repository.</div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-title">Tests executed</div>
+            <div class="event-desc">Tests run to verify new changes.</div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-title">PR created</div>
+            <div class="event-desc">Pull request created for review.</div>
+        </div>
+    </div>
+</body>
+</html>
